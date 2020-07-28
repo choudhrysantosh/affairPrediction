@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div style="color:darkred">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Affair Predictor For Women</h1><br>
+             
+ 
+            <h2>Age</h2><input id="first" name="age" required="required">
+            <h2>No. of years Married</h2><input id="second" name="no_of_years_married" required="required">
+            <h2>Children</h2><input id="first" name="children" required="required">
+            </select><br><br><h2>Ratings to Married Life</h2><select name="rate" id="rate" required="required">
+                <option value=1>1 star</option>
+                <option value=2>2 star</option>
+                <option value=3>3 star</option>
+                <option value=4>4 star</option>
+                <option value=5>5 star</option>
+            </select>
+            
+            </select><br><br><h2>Religious</h2><select name="religious" id="religious" required="required">
+                <option value=1>Not</option>
+                <option value=2>Mildly</option>
+                <option value=3>Fairly</option>
+                <option value=4>Strongly</option>
+            </select>
+            </select><br><br><h2>Level of Education</h2><select name="education" id="education" required="required">
+                <option value=9>Grade School</option>
+                <option value=12>High School</option>
+                <option value=14>Some College</option>
+                <option value=16>College Graduate</option>
+                <option value=17>Some Graduate school</option>
+                <option value=20>Advanced Degree</option>
+            </select>
+             </select><br><br><h2>Occupation</h2><select name="occupation" id="occupation" required="required">
+                <option value=1>Student</option>
+                <option value=2>Farming,Agriculture,Semi-skilled or Unskilled Worker</option>
+                <option value=3>White-colloar</option>
+                <option value=4>Teacher,Counselor,Social Worker,Nurse,Artist,Writers,Technician,Skilled Worker,</option>
+                <option value=4>Managerial,Administrative,Business</option>
+                <option value=6>Professional With Advanced Degree</option>
+            </select>
+            </select><br><br><h2>Husband's Occupation</h2><select name="husband_occupation" id="husband_occupation" required="required">
+                <option value=1>Student</option>
+                <option value=2>Farming,Agriculture,Semi-skilled or Unskilled Worker</option>
+                <option value=3>White-colloar</option>
+                <option value=4>Teacher,Counselor,Social Worker,Nurse,Artist,Writers,Technician,Skilled Worker,</option>
+                <option value=4>Managerial,Administrative,Business</option>
+                <option value=6>Professional With Advanced Degree</option>
+            </select>
+           
+            <br><br><button id="sub" type="submit ">Predict</button>
+            <br>
+
+
+
+
+        </form>
+
+
+
+        <br><br><h3>{{ prediction_text }}<h3>
+    </div>
+
+
+
+
+    <style>
+        body {
+              background-image: url('https://wallpapercave.com/wp/95gUwal.jpg');
+              background-repeat: no-repeat;
+              background-attachment: fixed;
+              background-size: cover;
+              text-align: center;
+              padding: 0px;
+        }
+        
+   
+        
+        #box {
+            border-radius: 60px;
+            border-color: 45px;
+            border-style: solid;
+            font-family: cursive;
+            text-align: center;
+            background-color: rgb(168, 131, 61);
+            font-size: medium;
+            position: absolute;
+            width: 700px;
+            bottom: 9%;
+            height: 850px;
+            right: 30%;
+            padding: 0px;
+            margin: 0px;
+            font-size: 14px;
+        }
+        
+  
+         #rate {
+            width: 200px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #rate {
+            background-color: coral;
+        }
+        #religious {
+            width: 200px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #religious {
+            background-color: coral;
+        }
+        #education {
+            width: 200px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #education {
+            background-color: coral;
+        }
+         #occupation {
+            width: 200px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #occupation {
+            background-color: coral;
+        }
+        #husband_occupation {
+            width: 200px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 20px;
+        }
+        
+        #husband_occupation {
+            background-color: coral;
+        }
+ 
+        
+        #sub {
+            width: 120px;
+            height: 43px;
+            text-align: center;
+            border-radius: 14px;
+            font-size: 18px;
+        }
+        
+        #sub:hover {
+            background-color: darkcyan;
+        }
+        
+        #first {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #second {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+        #third {
+            border-radius: 14px;
+            height: 25px;
+            font-size: 20px;
+            text-align: center;
+        }
+        
+
+    </style>
+</body>
+
+</html>
